@@ -13,12 +13,32 @@
   transition: all 300ms ease-out;
 }
 
-.ModalOpen {
+/* .ModalOpen {
   opacity: 1;
   transform: translateY(0);
+} */
+
+.ModalOpen {
+  animation: openModal 5s ease-out forwards;
 }
 
 .ModalClosed {
   opacity: 0;
   transform: translateY(-100%);
+}
+
+/* alternative: css animations */
+@keyframes openModal {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(90%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
